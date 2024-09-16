@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+        form > label {
+            margin-top: 10px
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li> <a href="http://kubsu.ru">KubSU</a></li>
+    <li><a href="https://kubsu.ru">https KubSU</a></li>
+    <li><a href="https://kubsu.ru" ><img alt="kubSU" width="200" height="200" src="src/kubsu.png"></a></li>
+    <li> <a href="/sobaka.html">Внутрення сокращенная</a> </li>
+    <li> <a href="/">Главная сокрашеная</a></li>
+    <li> <a href="#kotenok">на фрагмент(якорь) текущей</a></li>
+    <li> <a href="https://example.com/user?name=Ivan&age=42&city=Moscow">с тремя параметрами</a></li>
+    <li> <a href="http://example.com/user?id=42">с параметром id</a></li>
+    <li> <a href="sobaka.html">В текущем каталоге</a></li>
+    <li> <a href="about/company.html">в каталоге about</a></li>
+    <li> <a href="../higher.html">на 1 уровень выше</a></li>
+    <li> <a href="../../highest.html">на 2 уровня выше</a></li>
+    <li><p> Ведущими японскими автомобильными компаниями, работающими на международных рынках, являются <a href="https://ru.wikipedia.org/wiki/Toyota">«Тойота»</a>, <a href="https://ru.wikipedia.org/wiki/Nissan">«Ниссан»</a> (Йокогама) и другие.<a href=""></a></p></li>
+    <li>  <a href="https://kubsu.ru/#anchor">фрагмент стороннего сайта</a></li>
+    <li>
+        <img src="https://pixel-shot.com/get_image/i-2510621-0.JPG" usemap="#map" alt="Tea and Spoon" width="300" height="200">
+        <map name="map">
+            <area shape="rect" coords="220,20,270,160" alt="ложка" href="ссылка на ложку">
+            <area shape="circle" coords="110,85,63" alt="чай" href="ссылка на чай">
+        </map>
+    </li>
+    <li> <a href="">пустая</a></li>
+    <li> <a>без</a></li>
+    <li> <a href="https://dota2.com" rel="nofollow">с запретом следования</a></li>
+    <li > <!--noindex--><a href="https://ru.ruwiki.ru/">с запретом индексации</a><!--/noindex--></li>
+    <li>с аттрибутом title
+        <ol>
+            <li><a title="You can contact us at...( you can't, I'm sorry (no) &#128520; ) " href="./support.html">Support</a></li>
+            <li><a title="An Introduction guide for an easy start" href="./manual.html">Getting started</a></li>
+            <li><a title="your profile" href="./profile.html">Profile</a></li>
+        </ol>
+    </li>
+    <li><a href="ftp://admin:1234@github.com/C4erries/DotStatsFront/package.json">с авторизацией на файл</a></li>
+</ul>
+
+<form>
+    <h2>Форма:</h2>
+    <label >
+        <input type="text" name="name" placeholder="ФИО(полностью)">
+    </label>
+    <label >
+        <input type="tel" name="telNumber" placeholder="Номер телефона">
+    </label>
+    <label >
+        <input type="email" name="email" placeholder="E-mail">
+    </label>
+    <label style="display: flex; flex-direction: column; align-items: center;">
+        Дата рождения:
+        <input type="date" name="date">
+    </label>
+    <div>
+        <label>Пол:</label>
+        <label>
+            М
+            <input type="radio" name="radio-1">
+        </label>
+        <label>
+            Ж
+            <input type="radio" name="radio-1">
+        </label>
+    </div>
+    <label style="display: flex; flex-direction: column; align-items: center;">
+        Ваш любимый язык программирования:
+        <select name="language">
+            <option value="java">Java</option>
+            <option value="dart">Dart</option>
+            <option value="js">JavaScript</option>
+            <option value="c">C</option>
+            <option value="cpp">C++</option>
+            <option value="golang">Go</option>
+        </select>
+    </label>
+    <label>
+        <textarea name="bio" placeholder="Биография"></textarea>
+    </label>
+    <label style="display: flex; flex-direction: row"> <input type="checkbox" name="contract"> с контрактом ознакомлен (а)</label>
+    <label> <input type="submit" value="Сохранить"></label>
+</form>
+
+
+<h4 title="*Мяу*" id="kotenok">Kotenok</h4>
+</body>
+</html>
