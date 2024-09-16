@@ -58,6 +58,15 @@ header {
 footer{
   width: 100%;
   background: wheat;
+  height: 5vh;
+
+  *{
+    display: inline-block;
+    margin: 10px 0 10px 0;
+  }
+  .foo-body{
+    margin: 0 10px 0 10px;
+  }
 
 }
 
@@ -100,15 +109,13 @@ form {
   background: bisque;
   margin: 30px auto 0 auto;
   width: 960px;
-  align-items: center;
-  align-content: center;
 }
 
 form > * {
-  align-items: center;
   display: block;
   margin-top: 10px;
   margin-left: auto;
   width: 200px;
   margin-right: auto;
 }
+

@@ -53,6 +53,14 @@ header > nav a:active {
 footer {
   width: 100%;
   background: wheat;
+  height: 5vh;
+}
+footer * {
+  display: inline-block;
+  margin: 10px 0 10px 0;
+}
+footer .foo-body {
+  margin: 0 10px 0 10px;
 }
 
 .name {
@@ -93,12 +101,9 @@ form {
   background: bisque;
   margin: 30px auto 0 auto;
   width: 960px;
-  align-items: center;
-  align-content: center;
 }
 
 form > * {
-  align-items: center;
   display: block;
   margin-top: 10px;
   margin-left: auto;
