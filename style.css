@@ -1,21 +1,25 @@
 @charset "UTF-8";
+html {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 body {
   background-color: rgb(240, 240, 225);
   margin: 0;
+  /* скролл бар ( стандартный бесит ) */
 }
-
-body::-webkit-scrollbar {
-  width: 10px; /* ширина всей полосы прокрутки */
+body ::-webkit-scrollbar {
+  width: 10px;
 }
-
-body::-webkit-scrollbar-track {
-  background: rgb(240, 240, 225); /* цвет зоны отслеживания */
+body ::-webkit-scrollbar-track {
+  background: rgb(240, 240, 225);
 }
-
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.5); /* цвет бегунка */
-  border-radius: 20px; /* округлось бегунка */
-  border: 3px solid whitesmoke; /* отступ вокруг бегунка */
+body ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  border: 3px solid whitesmoke;
 }
 
 header {
@@ -50,19 +54,6 @@ header > nav a:active {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1) inset, -2px -2px 4px 2px rgba(255, 255, 255, 0.1) inset;
 }
 
-footer {
-  width: 100%;
-  background: wheat;
-  height: 5vh;
-}
-footer * {
-  display: inline-block;
-  margin: 10px 0 10px 0;
-}
-footer .foo-body {
-  margin: 0 10px 0 10px;
-}
-
 .name {
   display: inline-block;
   margin-left: 10px;
@@ -83,32 +74,68 @@ footer .foo-body {
   width: 920px;
   margin: 0 auto 0 auto;
 }
+.hyper-list li {
+  margin: 4px 0 4px 0;
+}
 
 table {
   width: 960px;
   height: 500px;
   background: bisque;
   margin: 30px auto 0 auto;
+  /*нечетные элементы среди тех, что имеют детей td без класса "error" (чтобы не считать заголовки и ошибки)*/
 }
 table td {
   text-align: center;
 }
+table th {
+  background: rgb(222, 176, 101);
+}
 table .error {
   background: rgba(255, 0, 0, 0.5);
 }
-
-form {
-  background: bisque;
-  margin: 30px auto 0 auto;
-  width: 960px;
+table tr:nth-child(even of :has(td:not(.error))) {
+  background: rgb(203, 185, 155);
 }
 
-form > * {
+form {
+  font-size: 20px;
+  background: bisque;
+  margin: 30px auto 0 auto;
+  padding: 10px 0 20px 0;
+  width: 960px;
+}
+form > label, form div, form > input {
   display: block;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: auto;
-  width: 200px;
+  width: 220px;
   margin-right: auto;
+}
+form h2 {
+  display: block;
+  margin: 5px auto 0 auto;
+  width: 200px;
+}
+form label:has(.checkbox) {
+  font-size: 13px;
+}
+form input:not(.radio, .checkbox), form select, form textarea {
+  text-align: center;
+  width: 200px;
+}
+
+footer {
+  width: 100%;
+  background: wheat;
+  height: 5vh;
+}
+footer * {
+  display: inline-block;
+  margin: 10px 0 10px 0;
+}
+footer .foo-body {
+  margin: 0 10px 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
